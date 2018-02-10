@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <algorithm>
 using namespace std;
-const int NMAX = 1100;
+const int MAX = 1100;
 int N, k;
-int f[NMAX][NMAX];
+int f[MAX][MAX];
 void inpProcess() {
     scanf("%d %d", &N, &k);
     for (int i = 1; i <= N; i++) 
