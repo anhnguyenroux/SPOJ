@@ -1,7 +1,7 @@
 #include <stdio.h>
-const int NMAX = 1e4 + 100;
+const int MAX = 1e4 + 100;
 int N, M;
-int Lab[NMAX];
+int Lab[MAX];
 int getRoot(int u) {
     while (Lab[u] > 0) u = Lab[u];
     return u;
