@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-const int MAX = 250;
+const int MAX = 110;
 const int kx[4] = {-1, 0, 1, 0};
 const int ky[4] = {0, 1, 0, -1};
 int N, M;
