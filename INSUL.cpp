@@ -1,3 +1,7 @@
+/*
+    INSUL : http://vn.spoj.com/problems/INSUL/
+    Explanation and Complexity are below
+*/
 #include <stdio.h>
 #include <algorithm>
 using namespace std;
@@ -31,3 +35,9 @@ int main() {
     Process();
     return 0;
 }
+/*
+    In this problem, we will sort in ascending order. 
+    We will divide the array in 2 parts, the bigger part we will insert each of them between 2 elements in smaller part. 
+    Then we can calculate the result with the best solution.
+    Complexity : O(NlogN);
+*/
