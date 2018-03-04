@@ -1,6 +1,6 @@
 /*
     ROBOCON : http://vn.spoj.com/problems/ROBOCON/
-    Explanation and Complexity is below
+    Explanation and Complexity are below
 */
 #include <stdio.h>
 #include <queue>
