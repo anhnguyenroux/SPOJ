@@ -33,3 +33,12 @@ int main() {
     Process();
     return 0;
 }
+/*
+    Similar to LCS, We have the formula for this problem 
+    Initialize :
+        F[1][i] = 1 for every a[1] = b[i];
+        F[i][1] = 1 for every a[i] = b[1];
+    Formula : 
+        F[i][j] = max(F[i - 1][j - 1], F[i - 1][j], F[i][j - 1]);
+        if (a[i] == b[i]) F[i][j] = max(F[i][j], F[i - 2][j - 2] + 1)
+*/
