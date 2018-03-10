@@ -38,3 +38,10 @@ int main() {
     process();
     return 0;
 }
+/*
+    F[i][j] : The maximum length of palindrome of S from i to j 
+    F[i][i] = 1 for every i <= n (n : length of S)
+    if (S[i] = S[j]) f[i][j] = f[i + 1][j - 1] + 2
+    if (S[i] != S[j]) f[i][j] = max(f[i + 1][j], f[i][j - 1])
+    Then we can trace the result
+*/
