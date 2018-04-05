@@ -1,11 +1,11 @@
 #include <iostream>
-#include <string>
+#include <string.h>
 #include <algorithm>
 using namespace std;
 typedef long long ll;
 const int MOD       =   1e9 + 7;
 const int MAX       =   1e5 + 10;
-string a, b;
+char a[MAX], b[MAX];
 ll POW[MAX];
 ll hashA[MAX], hashB[MAX];
 inline ll getHashA(int i, int j) {
@@ -17,11 +17,9 @@ inline ll getHashB(int i, int j) {
     return res;
 }
 int main() {
-    cin >> a;
-    cin >> b;
-    int n = a.length(), m = b.length();
-    a = " " + a;
-    b = " " + b;
+    scanf("%s", &a[1]);
+    scanf("%s", &b[1]);
+    int n = strlen(a + 1), m = strlen(b + 1);
     POW[0] = 1;
     for (int i = 1; i <= max(n, m); i++) 
         POW[i] = (POW[i - 1] * 26) % MOD;
@@ -33,9 +31,9 @@ int main() {
         hashB[i] = (hashB[i - 1] * 26 + b[i] - 'a') % MOD;
     for (int len = n; len >= 1; len--) 
         if (getHashA(n - len + 1, n) == getHashB(1, len)) {
-            cout << a.substr(1, n) + b.substr(len + 1, m - len);
+            printf("%s%s", a + 1, b + len + 1);
             return 0;
         }
-    cout << a.substr(1, n) + b.substr(1, m);
+    printf("%s%s", a + 1, b + 1);
     return 0;
 }
