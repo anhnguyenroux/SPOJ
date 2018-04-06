@@ -27,9 +27,7 @@ int main() {
         }
     }
     
-    int pos = 0;
-    for (int i = b.length(); i < n; i++)
-        pos = max(pos, nxt[i]);
+    int pos = nxt[n - 1];
     cout << a + b.substr(pos, b.length() - pos);
     return 0;
 }
