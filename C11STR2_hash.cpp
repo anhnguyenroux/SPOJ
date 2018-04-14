@@ -9,11 +9,11 @@ char a[MAX], b[MAX];
 ll POW[MAX];
 ll hashA[MAX], hashB[MAX];
 inline ll getHashA(int i, int j) {
-    ll res = (hashA[j] - hashA[i - 1] * POW[j - i + 1] + MOD * MOD) % MOD;
+    ll res = (hashA[j] - hashA[i - 1] * POW[j - i + 1] + (ll) MOD * MOD) % MOD;
     return res;
 }
 inline ll getHashB(int i, int j) {
-    ll res = (hashB[j] - hashB[i - 1] * POW[j - i + 1] + MOD * MOD) % MOD;
+    ll res = (hashB[j] - hashB[i - 1] * POW[j - i + 1] + (ll) MOD * MOD) % MOD;
     return res;
 }
 int main() {
