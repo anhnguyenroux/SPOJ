@@ -13,9 +13,9 @@ const ll LINF = (ll) 1e18;
 int main() {
     IO;
     #ifndef ONLINE_JUDGE
-		freopen("input.txt", "r", stdin);
-		freopen("output.txt", "w", stdout);
+		freopen("input.inp", "r", stdin);
+		freopen("output.out", "w", stdout);
 	#endif
-    
+
     return 0;
 }
